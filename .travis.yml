@@ -27,7 +27,6 @@ android:
     - android-26
     - android-27
     - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
-    - extra-android-support
   licenses:
     - 'android-sdk-license-.+'
 
@@ -37,7 +36,6 @@ before_script:
   - android-wait-for-emulator
 
 script:
-  - chmod +x ./gradlew
   - ./gradlew clean check connectedCheck jacocoTestReport
 
 after_success:
